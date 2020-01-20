@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_122131">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <!--内容-->
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_260"
+            android:background="@color/color_233950"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+
+                <ImageView
+                    android:id="@+id/title_left"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:padding="@dimen/dp_10"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_back" />
+
+            </RelativeLayout>
+
+            <include
+                layout="@layout/include_toolbar"
+                android:visibility="gone" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginBottom="@dimen/dp_50"
+                android:padding="20px">
+
+                <ImageView
+                    android:id="@+id/ivHeader"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_70"
+                    android:layout_marginLeft="10px"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/avatar_def" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_25"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6px"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20px"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="沧晓"
+                            android:textColor="@color/color_c4f4ff"
+                            android:textSize="@dimen/dp_16" />
+
+                        <ImageView
+                            android:id="@+id/ivGender"
+                            android:layout_width="30px"
+                            android:layout_height="30px"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/ic_gender_female"
+                            android:visibility="gone" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="手机号"
+                        android:textColor="@color/color_2770a4"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/my_chat_account"
+                        android:textColor="@color/color_2770a4"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvNickName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6px"
+                        android:singleLine="true"
+                        android:text="@string/nickname_colon"
+                        android:textColor="@color/color_2770a4"
+                        android:textSize="12sp" />
+
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.lqr.optionitemview.OptionItemView
+                android:id="@+id/oivAliasAndTag"
+                style="@style/OptionItem"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_common_item"
+                android:visibility="gone"
+                app:left_text="@string/set_alias_and_tag" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/llArea"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:layout_marginTop="40px"
+                android:background="@drawable/selector_common_item"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_weight="1.5"
+                    android:text="@string/area"
+                    android:textColor="@color/black0"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvArea"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_weight="4"
+                    android:textColor="@color/gray1"
+                    android:textSize="16sp" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                style="@style/Line"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:visibility="gone" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/llSignature"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@drawable/selector_common_item"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_weight="1"
+                    android:text="@string/signature"
+                    android:textColor="@color/black0"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvSignature"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_weight="4"
+                    android:textColor="@color/gray1"
+                    android:textSize="16sp" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/btnCheat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/color_233950"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/haoyouxiangqing_icon_01" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:text="@string/send_message"
+                android:textColor="@color/color_c4f4ff"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/btnAudioCheat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/color_233950"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/haoyouxiangqing_icon_02" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:text="语音聊天"
+                android:textColor="@color/color_c4f4ff"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/btnAddToVideo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/color_233950"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/haoyouxiangqing_icon_03" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:text="视频聊天"
+                android:textColor="@color/color_c4f4ff"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mBtnAddToContact"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/color_233950"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:text="添加好友"
+                android:textColor="@color/color_c4f4ff"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+    <!--菜单-->
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rlMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/vMask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/mask" />
+
+        <ScrollView
+            android:id="@+id/svMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scrollbars="none">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.lqr.optionitemview.OptionItemView
+                    android:id="@+id/oivAlias"
+                    style="@style/OptionItem"
+                    android:background="@drawable/selector_common_item"
+                    app:left_image_margin_left="40px"
+                    app:left_image_margin_right="36px"
+                    app:left_src="@mipmap/ic_friend_remark"
+                    app:left_text="@string/set_alias_and_tag"
+                    app:left_text_color="@color/gray1" />
+
+                <com.lqr.optionitemview.OptionItemView
+                    style="@style/OptionItem"
+                    android:background="@drawable/selector_common_item"
+                    android:visibility="gone"
+                    app:left_image_margin_left="40px"
+                    app:left_image_margin_right="36px"
+                    app:left_src="@mipmap/ic_friend_share"
+                    app:left_text="发送该名片"
+                    app:left_text_color="@color/gray1" />
+
+                <com.lqr.optionitemview.OptionItemView
+                    android:id="@+id/oivAddToBlackList"
+                    style="@style/OptionItem"
+                    android:background="@drawable/selector_common_item"
+                    android:visibility="gone"
+                    app:left_image_margin_left="40px"
+                    app:left_image_margin_right="36px"
+                    app:left_src="@mipmap/ic_friend_forbid"
+                    app:left_text="@string/add_to_black_list"
+                    app:left_text_color="@color/gray1" />
+
+                <com.lqr.optionitemview.OptionItemView
+                    android:id="@+id/oivDelete"
+                    style="@style/OptionItem"
+                    android:background="@drawable/selector_common_item"
+                    app:left_image_margin_left="40px"
+                    app:left_image_margin_right="36px"
+                    app:left_src="@mipmap/ic_friend_delete"
+                    app:left_text="@string/delete"
+                    app:left_text_color="@color/gray1" />
+
+                <com.lqr.optionitemview.OptionItemView
+                    style="@style/OptionItem"
+                    android:background="@drawable/selector_common_item"
+                    android:visibility="gone"
+                    app:left_image_margin_left="40px"
+                    app:left_image_margin_right="36px"
+                    app:left_src="@mipmap/ic_friend_to_desktop"
+                    app:left_text="@string/add_to_desktop"
+                    app:left_text_color="@color/gray1" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+        </ScrollView>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoFrameLayout>

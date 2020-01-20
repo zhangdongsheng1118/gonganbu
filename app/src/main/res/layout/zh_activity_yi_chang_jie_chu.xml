@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#122131"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@drawable/nav_bg">
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_7"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/icon_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="异常详情"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp_18"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginLeft="@dimen/dp_163"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_59"
+        android:layout_marginLeft="@dimen/dp_46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="异常名称：着急着急"
+        android:textColor="#ffc7f5ff"
+        android:textSize="@dimen/sp_16"/>
+
+    <TextView
+        android:layout_marginLeft="@dimen/dp_62"
+        android:layout_marginTop="@dimen/dp_31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提交人：宋江"
+        android:textColor="#ffc7f5ff"
+        android:textSize="@dimen/sp_16" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_78"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="描述："
+            android:textColor="#ffc7f5ff"
+            android:textSize="@dimen/sp_16" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="描述：有问题有问题有问题有问题有问题有问题"
+            android:textColor="#ffc7f5ff"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_128"
+        android:layout_width="@dimen/dp_204"
+        android:layout_height="@dimen/dp_141"
+        android:src="@drawable/tu" />
+
+    <Button
+        android:layout_marginLeft="@dimen/dp_100"
+        android:layout_marginTop="@dimen/dp_50"
+        android:textSize="@dimen/sp_16"
+        android:text="确认解除"
+        android:textColor="#ffc7f5ff"
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_36"
+        android:background="@drawable/yichang_btn_n"/>
+
+</LinearLayout>

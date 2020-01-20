@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="30px"
+        android:paddingRight="30px">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:orientation="horizontal">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px">
+
+                    <TextView
+                        android:layout_width="120px"
+                        android:layout_height="wrap_content"
+                        android:text="@string/username"
+                        android:textColor="@color/black0"
+                        android:textSize="28px"/>
+
+                    <EditText
+                        android:id="@+id/etUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="至少输入两个字符，例如：zhangsan666"
+                        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:textColorHint="@color/gray3"
+                        android:textSize="28px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    style="@style/Line"
+                    />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px">
+
+                    <TextView
+                        android:layout_width="120px"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nickname"
+                        android:textColor="@color/black0"
+                        android:textSize="28px"/>
+
+                    <EditText
+                        android:id="@+id/etNick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="例如：陈晨"
+                        android:textColorHint="@color/gray3"
+                        android:textSize="28px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    android:id="@+id/vLineNick"
+                    style="@style/Line"
+                    />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <ImageView
+                android:id="@+id/ivAlbum"
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:scaleType="fitXY"
+                android:background="@color/gray"
+                android:src="@drawable/ic_person_white"
+                android:visibility="visible" />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+                <TextView
+                    android:layout_width="120px"
+                    android:layout_height="wrap_content"
+                    android:text="@string/password"
+                    android:textColor="@color/black0"
+                    android:textSize="28px"/>
+
+                <EditText
+                    android:id="@+id/etPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="56px"
+                    android:background="@null"
+                    android:hint="填写密码"
+                    android:inputType="textPassword"
+                    android:text=""
+                    android:textColorHint="@color/gray3"
+                    android:textSize="28px"/>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <ImageView
+                android:id="@+id/ivSeePwd"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20px"
+                android:src="@mipmap/ic_see_pwd"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:id="@+id/vLinePwd"
+            style="@style/Line"
+            />
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="30px"
+            android:paddingRight="30px">
+
+            <TextView
+                android:id="@+id/tvAreaCode"
+                android:layout_width="120px"
+                android:layout_height="wrap_content"
+                android:text="+86"
+                android:textColor="@color/black0"
+                android:textSize="28px"/>
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="您的手机号码(选填)"
+                android:inputType="phone"
+                android:text=""
+                android:textColorHint="@color/gray3"
+                android:textSize="28px"/>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:id="@+id/vLinePhone"
+            style="@style/Line"
+            />
+
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px">
+
+                    <TextView
+                        android:layout_width="120px"
+                        android:layout_height="wrap_content"
+                        android:text="邮箱"
+                        android:textColor="@color/black0"
+                        android:textSize="28px"/>
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="选填"
+                        android:textColorHint="@color/gray3"
+                        android:textSize="28px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    style="@style/Line"
+                    />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px">
+
+                    <TextView
+                        android:layout_width="120px"
+                        android:layout_height="wrap_content"
+                        android:text="部门"
+                        android:textColor="@color/black0"
+                        android:textSize="28px"/>
+
+                    <EditText
+                        android:id="@+id/etDepart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="选填"
+                        android:textColorHint="@color/gray3"
+                        android:textSize="28px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    style="@style/Line"
+                    />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/llArea"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_weight="1"
+                android:text="@string/area"
+                android:textColor="@color/black0"
+                android:textSize="28px"/>
+
+            <TextView
+                android:id="@+id/tvArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:text="中国"
+                android:textColor="@color/green1"
+                android:textSize="28px"/>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            style="@style/Line"
+            />
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="30px"
+            android:paddingRight="20px"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="120px"
+                android:layout_height="wrap_content"
+                android:text="@string/verification_code"
+                android:textColor="@color/black0"
+                android:textSize="28px"/>
+
+            <EditText
+                android:id="@+id/etVerifyCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:text=""
+                android:textColorHint="@color/gray3"
+                android:textSize="28px"/>
+
+            <Button
+                android:id="@+id/btnSendCode"
+                android:layout_width="200px"
+                android:layout_height="70px"
+                android:background="@drawable/selector_register_send_code"
+                android:text="发送验证码"
+                android:textColor="@color/white"
+                android:textSize="28px"/>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:id="@+id/vLineVertifyCode"
+            style="@style/Line"
+            />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:layout_marginBottom="30px"
+            android:layout_marginTop="40px"
+            android:background="@drawable/selector_login_btn"
+            android:enabled="false"
+            android:text="注册"
+            android:textColor="@color/selector_login_btn"
+            android:textSize="30px"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

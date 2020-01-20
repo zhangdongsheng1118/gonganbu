@@ -1,0 +1,2 @@
+include ':app', ':tinodesdk1', ':update', ':emoji', ':starrtc', ':imagepicker'
+project(':tinodesdk1').projectDir = new File('tinodesdk')

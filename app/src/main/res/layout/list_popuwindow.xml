@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yixin.tinode.widget.AutoCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/color_233950"
+    app:cardElevation="5dp">
+
+    <com.lqr.recyclerview.LQRRecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="@dimen/dp_230"
+        app:rv_divider_color="@color/color_192d43"
+        android:layout_height="wrap_content">
+
+    </com.lqr.recyclerview.LQRRecyclerView>
+</com.yixin.tinode.widget.AutoCardView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_40"
+    android:gravity="center_vertical"
+    android:layout_marginLeft="@dimen/dp_10"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp_10">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/id_treenode_label"
+        android:layout_width="@dimen/dp_180"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_height="@dimen/dp_40"
+        android:textColor="@color/color_c7f5ff"
+        android:textSize="@dimen/dp_16" />
+
+
+</LinearLayout>

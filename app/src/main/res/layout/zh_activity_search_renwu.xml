@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_122131"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+
+        <ImageView
+            android:id="@+id/title_left"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_7"
+            android:padding="@dimen/dp_10"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back" />
+
+        <EditText
+            android:id="@+id/title_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@null"
+            android:ellipsize="end"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:lines="1"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/color_c4f4ff"
+            android:textColorHint="@color/color_c4f4ff"
+            android:textCursorDrawable="@drawable/guangbiao"
+            android:textSize="@dimen/sp_18" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_233950" />
+
+    <TextView
+        android:id="@+id/str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:text="输入任务名称或负责人名称"
+        android:textColor="#ff557aa2"
+        android:textSize="12sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginRight="@dimen/common_margin"
+            android:paddingTop="@dimen/dp_25"
+            android:paddingBottom="@dimen/dp_30">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@+id/iv_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/zanwurenwu_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="暂无任务"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_18" />
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

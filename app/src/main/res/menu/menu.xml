@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/select_home"
+        android:title="任务"
+        android:id="@+id/homeItem"/>
+    <item
+        android:icon="@drawable/select_vip"
+        android:title="消息"
+        android:id="@+id/vipItem"/>
+    <item
+        android:icon="@drawable/select_che"
+        android:title="通讯录"
+        android:id="@+id/cheItem"/>
+    <item
+        android:icon="@drawable/select_me"
+        android:title="个人中心"
+        android:id="@+id/meItem"/>
+</menu>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+            android:id="@+id/whoops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            />
+
+    <TextView
+        android:id="@+id/contact_name_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/buttons_call_container"
+        android:textSize="24sp"
+        android:layout_margin="8dp"/>
+
+    <LinearLayout
+            android:id="@+id/buttons_call_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+        <ImageButton
+                android:id="@+id/button_call_switch_camera"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="8dp"
+                android:background="@android:drawable/ic_menu_camera"
+                android:contentDescription="@string/switch_camera"
+                />
+
+        <ImageButton
+                android:id="@+id/button_call_screenshot"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/ic_screenshot"
+                android:contentDescription="@string/screenshot_desc"
+                />
+
+        <ImageButton
+                android:id="@+id/button_call_toggle_speaker"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/ic_speaker_on"
+                android:contentDescription="@string/toggle_speaker"
+                />
+
+        <ImageButton
+                android:id="@+id/button_call_switch_role"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/ic_switch_role"
+                android:contentDescription="@string/switch_role"
+                />
+
+        <ImageButton
+                android:id="@+id/button_call_disconnect"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/disconnect"
+                android:contentDescription="@string/disconnect_call"
+                />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#122131"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@drawable/nav_bg">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_13"
+            android:gravity="center"
+            android:text="消息"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp_18" />
+
+        <ImageView
+            android:id="@+id/message_search1"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/sp_18"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_toLeftOf="@+id/message_btn1"
+            android:src="@drawable/tianjiaqunliao_icon" />
+
+        <ImageView
+            android:id="@+id/message_btn1"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/sp_18"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_20"
+            android:src="@drawable/jishiliaotian_icon_02" />
+    </RelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.lqr.recyclerview.LQRRecyclerView
+            android:id="@+id/rvContacts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:rv_divider_color="@color/transparent"
+            app:rv_divider_size="1px" />
+
+        <com.yixin.tinode.widget.QuickIndexBar
+            android:id="@+id/qib"
+            android:layout_width="40px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" />
+
+        <!--字母对话框-->
+        <TextView
+            android:id="@+id/tvLetter"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_contact_letter_bg"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+</LinearLayout>

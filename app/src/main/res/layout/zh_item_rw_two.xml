@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_21"
+    android:background="#122131"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/home_anjianxinxi_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_15">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ajmengcheng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="案件名称：xx缉毒大队案件"
+                android:textColor="#ffc4f4ff"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/js"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/dp_80"
+                android:text="待接受"
+                android:textColor="#ffd3a36a"
+                android:textSize="@dimen/sp_12" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/rwmingcheng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="任务名称：侦查"
+            android:textColor="#ffc4f4ff"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/duixiang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="行动对象：李逵"
+            android:textColor="#ffc4f4ff"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/fuzeren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="负责人：孙二娘"
+            android:textColor="#ffc4f4ff"
+            android:textSize="@dimen/sp_13" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:lineSpacingMultiplier="1.3"
+                android:text="任务描述："
+                android:textColor="#ffc4f4ff"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/rwmiaohu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:maxLines="2"
+                android:lineSpacingMultiplier="1.3"
+                android:text="务必仔细认真务必仔细认真务必仔细认真真务必仔细认真务必仔细认真务必仔细认"
+                android:textColor="#ffc4f4ff"
+                android:textSize="@dimen/sp_13" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/date_time"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="发布时间：2019年6月17日"
+            android:textColor="#ffc4f4ff"
+            android:textSize="@dimen/sp_11" />
+    </LinearLayout>
+
+</LinearLayout>

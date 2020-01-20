@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/color_122131"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/llRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <!--内容-->
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.lqr.recyclerview.LQRRecyclerView
+                android:id="@+id/rvMsg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+        <FrameLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/nav_bg_bottom"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivAudio"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10px"
+                android:src="@drawable/jishiliaotian_icon_03" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/etContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="@dimen/dp_8"
+                    android:textColor="@color/white"
+                    android:textCursorDrawable="@drawable/guangbiao"
+                    android:background="@drawable/yichang_input_01"
+                     />
+
+                <Button
+                    android:id="@+id/btnAudio"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:layout_margin="@dimen/dp_8"
+                    android:background="@drawable/renwu_btn_s"
+                    android:text="@string/please_to_talk"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    />
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivEmo"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_margin="10px"
+                android:src="@drawable/jishiliaotian_icon_01" />
+
+            <ImageView
+                android:id="@+id/ivMore"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="10px"
+                android:layout_marginRight="14px"
+                android:src="@drawable/jishiliaotian_icon_02" />
+
+            <Button
+                android:id="@+id/btnSend"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="86px"
+                android:layout_height="70px"
+                android:layout_marginRight="8px"
+                android:background="@drawable/shape_session_btn_send"
+                android:text="@string/send"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:visibility="gone" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:id="@+id/flEmotionView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <View style="@style/Line" />
+
+        <!--表情-->
+        <com.lqr.emoji.EmotionLayout
+            android:id="@+id/elEmotion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+        <!--其他功能-->
+        <include
+            android:id="@+id/llMore"
+            layout="@layout/include_func_layout"
+            android:visibility="gone"/>
+    </com.zhy.autolayout.AutoFrameLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>
+
+    <com.yixin.tinode.ui.customControl.MovableFloatingActionButton
+        android:visibility="gone"
+        android:id="@+id/fabPTT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:backgroundTint="@color/colorBorderRed"
+        android:backgroundTintMode="src_atop"
+        android:elevation="6dp"
+        android:src="@drawable/ic_ptt_normal"
+        android:layout_alignBottom="@+id/llRoot"
+        android:layout_alignLeft="@+id/llRoot"
+        app:layout_anchor="@+id/llRoot"
+        app:layout_anchorGravity="end|left|bottom"/>
+
+</RelativeLayout>
+

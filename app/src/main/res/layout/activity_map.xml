@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rlMap"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/ibShowLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="40px"
+            android:background="@null"
+            android:src="@mipmap/ah6" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <!--<com.zhy.autolayout.AutoLinearLayout-->
+        <!--android:minHeight="100dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:background="@color/white"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:padding="10dp">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="[位置]"-->
+            <!--android:textSize="16sp"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_name"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:text="@string/typing_notifications_enabled"/>-->
+    <!--</com.zhy.autolayout.AutoLinearLayout>-->
+</com.zhy.autolayout.AutoLinearLayout>

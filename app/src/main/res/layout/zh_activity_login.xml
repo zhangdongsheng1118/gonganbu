@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_150"
+        android:gravity="center_horizontal"
+        android:text="作战指挥平台"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="@dimen/dp_100"
+        android:layout_marginRight="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="用户名:"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp_16" />
+
+        <EditText
+            android:id="@+id/usernameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:lines="1"
+            android:maxLength="20"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="@dimen/sp_16"
+            android:theme="@style/MyEditText" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="密码："
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp_16" />
+
+        <EditText
+            android:id="@+id/passwordEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:digits="1234567890.abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="20"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+
+            android:textSize="@dimen/sp_16"
+            android:theme="@style/MyEditText" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/white" />
+
+    <Button
+        android:id="@+id/login_Btn"
+        android:layout_width="@dimen/dp_244"
+        android:layout_height="@dimen/dp_41"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_41"
+        android:background="@drawable/login_btn_n"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sp_16" />
+
+    <Button
+        android:id="@+id/ip_set"
+        android:layout_width="@dimen/dp_244"
+        android:layout_height="@dimen/dp_41"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_41"
+        android:background="@drawable/login_btn_n"
+        android:gravity="center"
+        android:text="IP设置"
+        android:textColor="#FFFFFF" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/update_tv"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:layout_width="wrap_content"
+            android:text="检查版本"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_18"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

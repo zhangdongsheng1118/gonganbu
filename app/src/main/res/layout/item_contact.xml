@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:background="@color/color_122131"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvIndex"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_20"
+        android:background="@color/color_172f48"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_13"
+        android:text="A"
+        android:textColor="@color/color_00fcff"
+        android:textSize="@dimen/dp_10"
+        android:visibility="gone" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_13"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/ivHeader"
+            android:layout_width="@dimen/dp_34"
+            android:layout_height="@dimen/dp_34"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/avatar_def" />
+
+        <!--九宫格头像-->
+        <com.lqr.ninegridimageview.LQRNineGridImageView
+            android:id="@+id/ngiv"
+            android:layout_width="@dimen/dp_34"
+            android:layout_height="@dimen/dp_34"
+            android:background="@color/gray9"
+            android:visibility="gone"
+            app:imgGap="1px" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="沧晓"
+            android:textColor="@color/color_c4f4ff"
+            android:textSize="@dimen/dp_14" />
+
+        <CheckBox
+            android:id="@+id/cb"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_20"
+            android:clickable="false"
+            android:visibility="gone" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:id="@+id/vLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_192d43"
+        android:layout_marginLeft="@dimen/dp_60" />
+
+</com.zhy.autolayout.AutoLinearLayout>

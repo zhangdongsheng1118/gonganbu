@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="200dp"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rlAlbum"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/ivAlbum"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_session_func">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/gongenngxiangqing_icon_02" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivAlbum"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15px"
+                android:text="@string/album"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rlTakePhoto"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/ivShot"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_session_func">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/gongenngxiangqing_icon_01" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivShot"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15px"
+                android:text="@string/shot"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rlMeeting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/ivMeeting"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_session_func">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/gongenngxiangqing_icon_04" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivMeeting"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15px"
+                android:text="语音通话"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rlFile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/ivFile"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_session_func">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/gongenngxiangqing_icon_03" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivFile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15px"
+                android:text="视频通话"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rlLocation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/ivLocation"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_session_func">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/gongenngxiangqing_icon_05" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivLocation"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15px"
+                android:text="@string/location"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_session_func"
+                android:src="@mipmap/ic_func_shot" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivShot"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15px"
+                android:text="@string/shot"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_session_func"
+                android:src="@mipmap/ic_func_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivLocation"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15px"
+                android:text="@string/location"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_session_func"
+                android:src="@mipmap/ic_func_red_packet" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivFile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15px"
+                android:text="@string/attach_file"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

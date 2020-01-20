@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yixin.tinode"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 通过GPS得到精确位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 通过网络得到粗略位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 访问网络. 某些位置信息需要从网络服务器获取 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 访问WiFi状态. 需要WiFi信息用于网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 修改WiFi状态. 发起WiFi扫描, 需要WiFi信息用于网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 访问网络状态, 检测网络的可用性. 需要网络运营商相关信息用于网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 访问网络的变化, 需要某些信息用于网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 访问手机当前状态, 需要某些信息用于网络定位 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <!-- Make current user discoverable by other users -->
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <!-- Check if account sync is enabled -->
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <!-- Enable sync if it's disabled -->
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <!-- Needed for contact discovery - finding users on tinode who are in user's address book -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- Store tinode IM id as a record in the address book -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- Creating and storing tinode credentials in the AccountManager -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".app.MyApp"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.yixin.tinode.util.glide.progress.MyGlideModule"
+            android:value="GlideModule" />
+        <meta-data
+            android:name="design_width"
+            android:value="720" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+
+        <!-- 地图 -->
+        <meta-data
+            android:name="TencentMapSDK"
+            android:value="TYQBZ-MRBKU-K7FVL-4JBW5-DOG5O-SZB4A" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="kLZiaLPVLzXP5tFRoIUOFQ86LTXEw2Vh" />
+        <!-- imlib config begin -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <!-- end -->
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.SessionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--<activity
+            android:name=".ui.activity.WebViewActivity"
+            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".ui.activity.web.WebCommonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.NewFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AddFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SearchUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.UserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PostScriptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SetAliasActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.QRCodeCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ChangeMyNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CreateGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.TakePhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullWindowTheme" />
+        <activity
+            android:name=".ui.activity.MyLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.GroupListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SessionInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RemoveGroupMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SetGroupNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ShowBigImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.DownLoadOfflineMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.IpSetUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LocationInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RelayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SearchMsgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SettingNewMsgNotifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SettingAVActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SearchGlobalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CollectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CollectShowActivity"
+            android:screenOrientation="portrait" />
+       <!-- <activity
+            android:name=".ui.activity.CallActivity"
+            android:configChanges="orientation|smallestScreenSize|screenSize|screenLayout"
+            android:screenOrientation="portrait"
+            android:theme="@style/CallActivityTheme" />-->
+        <activity
+            android:name=".ui.activity.ContentActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".tinode.account.TinodeAccountService"
+            android:exported="false">
+
+            <!-- Required filter used by the system to launch the account service. -->
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <!-- This points to an XMLf ile which describes the account service. -->
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <service
+            android:name=".tinode.account.SyncService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+            <meta-data
+                android:name="android.provider.CONTACTS_STRUCTURE"
+                android:resource="@xml/contacts_source" />
+        </service>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.yixin.tinode.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name=".ui.service.BackgroundService"
+            android:enabled="true"
+            android:exported="false"></service>
+
+        <activity
+            android:name="com.zuozhan.app.activity.YiChangJieChuActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHTongZhiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zuozhan.app.activity.ZHLoginActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHMainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHOperationGuideActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.WebDataActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHChangePswActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHChangeUserActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHShipinActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.photo.imagepicker.ui.ImagePreviewDelActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.photo.imagepicker.ui.ImageCropActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.photo.imagepicker.ui.ImageGridActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.photo.imagepicker.ui.ImagePreviewActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHRenwuActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHSearchRenwuActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHRenwuInfoActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHExceptionInUploadActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHExceptionListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHExceptionInfoActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHLocationActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHSearchTongzhiActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHServerHostActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.LocationTestActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHVideoInfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name="com.zuozhan.app.activity.ZHVideoInfoActivity2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"></activity>
+
+        <receiver android:name="com.zuozhan.app.activity.VolumeKeyBroadcastReceiver"
+            android:exported="true"
+            >
+            <intent-filter android:priority="1000">
+                <action android:name="android.media.AUDIO_BECOMING_NOISY"/>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray5"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar"/>
+
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4px"
+            android:text="设置IM服务器及端口"
+            android:textColor="@color/gray2"
+            android:textSize="18sp" />
+        <com.zhy.autolayout.AutoRelativeLayout
+            style="@style/OptionItem"
+            android:background="@drawable/selector_option_item"
+            android:paddingLeft="@dimen/option_item_margin_left"
+            android:paddingRight="@dimen/option_item_margin_left"
+            >
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IP地址："
+                android:textColor="@color/black0"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/et_IM_IP"
+                android:layout_marginLeft="@dimen/option_item_margin_left"
+                android:layout_toRightOf="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:inputType="phone"
+                />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            style="@style/Line"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            />
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            style="@style/OptionItem"
+            android:background="@drawable/selector_option_item"
+            android:paddingLeft="@dimen/option_item_margin_left"
+            android:paddingRight="@dimen/option_item_margin_left"
+            >
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="端口号："
+                android:textColor="@color/black0"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/et_IM_Port"
+                android:layout_marginLeft="@dimen/option_item_margin_left"
+                android:layout_toRightOf="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:inputType="number"
+                />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            style="@style/OptionItem"
+            android:background="@drawable/selector_option_item"
+            android:paddingLeft="@dimen/option_item_margin_left"
+            android:paddingRight="@dimen/option_item_margin_left"
+            >
+        <RadioGroup
+            android:id="@+id/tls_is_enable"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/tls_disable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="是"/>
+            <RadioButton
+                android:id="@+id/tls_enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="否"/>
+        </RadioGroup>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4px"
+            android:text="音视频服务器的IP及端口号"
+            android:textColor="@color/gray2"
+            android:textSize="18sp" />
+        <View
+            style="@style/Line"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            />
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            style="@style/OptionItem"
+            android:background="@drawable/selector_option_item"
+            android:paddingLeft="@dimen/option_item_margin_left"
+            android:paddingRight="@dimen/option_item_margin_left"
+            >
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IP地址："
+                android:textColor="@color/black0"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/et_video_IP"
+                android:layout_marginLeft="@dimen/option_item_margin_left"
+                android:layout_toRightOf="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:inputType="phone"
+
+                />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        <View
+            style="@style/Line"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            />
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            style="@style/OptionItem"
+            android:background="@drawable/selector_option_item"
+            android:paddingLeft="@dimen/option_item_margin_left"
+            android:paddingRight="@dimen/option_item_margin_left"
+            >
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="端口号："
+                android:textColor="@color/black0"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/et_video_Port"
+                android:layout_marginLeft="@dimen/option_item_margin_left"
+                android:layout_toRightOf="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:inputType="number"
+                />
+        </com.zhy.autolayout.AutoRelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4px"
+            android:text="视频质量"
+            android:textColor="@color/gray2"
+            android:textSize="18sp" />
+        <com.zhy.autolayout.AutoRelativeLayout
+            style="@style/OptionItem"
+            android:background="@drawable/selector_option_item"
+            android:paddingLeft="@dimen/option_item_margin_left"
+            android:paddingRight="@dimen/option_item_margin_left"
+            >
+
+            <RadioGroup
+                android:id="@+id/video_quality"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+              >
+                <RadioButton
+                    android:id="@+id/rb_high_quality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="高"/>
+                <RadioButton
+                    android:id="@+id/rb_middle_quality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="中"/>
+                <RadioButton
+                    android:id="@+id/rb_low_quality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="低"/>
+            </RadioGroup>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginBottom="30px"
+        android:layout_marginTop="30px"
+        android:background="@drawable/selector_login_btn"
+        android:enabled="true"
+        android:text="保存"
+        android:textColor="@color/selector_login_btn"
+        android:textSize="30px"/>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

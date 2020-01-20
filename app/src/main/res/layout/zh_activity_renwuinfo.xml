@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_122131"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/nav_bg">
+
+
+        <ImageView
+            android:id="@+id/title_left"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_7"
+            android:padding="@dimen/dp_10"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/title_center"
+            android:layout_width="wrap_content"
+            android:maxWidth="180dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:text="任务执行"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp_18" />
+
+        <ImageView
+            android:id="@+id/title_center_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/title_center"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@drawable/audio_icon"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/title_right"
+            android:layout_width="@dimen/dp_180"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:text="测试定位数据"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp_18" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </WebView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rwanjian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="案件："
+                android:textColor="@color/color_2770a4"
+                android:textSize="@dimen/dp_16" />
+
+            <TextView
+                android:id="@+id/rwmingcheng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="任务名称："
+                android:textColor="@color/color_2770a4"
+                android:textSize="@dimen/dp_16" />
+
+            <TextView
+                android:id="@+id/fuzeren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="负责人："
+                android:textColor="@color/color_2770a4"
+                android:textSize="@dimen/dp_16" />
+
+            <TextView
+                android:id="@+id/duixiang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="行动对象："
+                android:textColor="@color/color_2770a4"
+                android:textSize="@dimen/dp_16" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_53"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginBottom="54dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/rinfo_btn0"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/dingw" />
+
+            <RelativeLayout
+                android:id="@+id/rinfo_btn1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="11dp"
+                    android:src="@drawable/renwuzhixing_btn_01" />
+
+                <TextView
+                    android:id="@+id/red_text"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_0_5"
+                    android:layout_marginRight="@dimen/dp_0_5"
+                    android:background="@drawable/shape_red_dot"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/renwu_btn2"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/renwuzhixing_btn_02" />
+
+            <ImageView
+                android:id="@+id/renwu_btn3"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/renwuzhixing_btn_03" />
+
+            <ImageView
+                android:id="@+id/renwu_btn4"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/renwuzhixing_btn_04" />
+
+            <ImageView
+                android:id="@+id/renwu_btn5"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/renwuzhixing_btn_05" />
+        </LinearLayout>
+
+        <!--   <ImageView
+           android:layout_width="60dp"
+           android:layout_height="60dp"
+           android:layout_alignParentBottom="true"
+           android:layout_centerHorizontal="true"
+           android:layout_marginBottom="@dimen/dp_40"
+           android:src="@drawable/renwuzhixing_btn_06" />-->
+
+        <TextView
+            android:id="@+id/push_btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/push_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:clickable="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/color_2770a4"
+            android:textSize="18dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/push_btn"
+            android:layout_width="@dimen/dp_125"
+            android:layout_height="@dimen/dp_125"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:background="@drawable/btn_style_talk"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="按住说话"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/renwu_info_all_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/renwu_info_all_upload"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:layout_marginBottom="@dimen/dp_37"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/share_zh" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="人员列表  "
+                android:textColor="@color/color_2770a4"
+                android:textSize="@dimen/dp_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/renwu_info_all_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:layout_marginBottom="@dimen/dp_37"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/renwuzhixing_btn_07" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="采集音视频"
+                android:textColor="@color/color_2770a4"
+                android:textSize="@dimen/dp_12" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
